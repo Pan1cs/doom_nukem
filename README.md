@@ -1,5 +1,5 @@
 # Doom-Nukem
-Final Project in the graphics branch of Hive Helsinki code school. Idea of the projects is to extend wolf3d project, and make it a full blown game, with animations, collisions, sprites, sounds, music and a map editor.
+Final Project in the graphics branch of Hive Helsinki code school. Idea of the project is to extend wolf3d project, and make it into a full blown game, with animations, collisions, sprites, sounds, music and a map editor.
 
 ## Final score
 ![Finalscore](assets/score.png) 
@@ -36,16 +36,13 @@ We decided to pursue a track of creating Duke Nukem-like engine, and to expand t
 - Correcting floors by perspective-correct interpolation.
 - Trying to get all the functions to work with Windows as well as they do in Linux environment.
 - Moving away from Build Engine type of structure to full 3D engine.
-- Typecasting to from (float) to (int) when drawing scanlines.
+- Typecasting from (float) to (int) when drawing scanlines.
 - Implementing polygon clipping.
 - Floating point issues with arccos functions.
-- Getting collisions work when more complexity is added to the engine day by day.
+- Getting collisions to work when more complexity is added to the engine day by day.
 
 ## Learned through project
-- Makefile and Makefile rules
-- Batch scripting
 - How to deploy code to a seperate repository
-- Git Actions (Norminette and build script)
 - Platform specific design problems (__write vs. write)
 - Raycasting technique.
 - Build engine internals.
@@ -54,25 +51,22 @@ We decided to pursue a track of creating Duke Nukem-like engine, and to expand t
 - Sector based map design.
 - Affine texture mapping.
 - Perspective correct texture mapping.
-- Matrix calculations.
 - Triangulation algorithms.
-- Sutherland-Hodgeman Polygon Clipping.
-- From flat shading to Gouraud shading.
 - Averaging unit vectors and adjacent triangles.
-- Using lighting models Phong-Blinn vs. Lambertian reflectance.
 - Subdivision of scanlines to smaller batches to improve calculation speed ie. Quake and demos used these in end of 1990s
 - Manipulation of direction and velocity of entities based on time.
-- Manipulation of direction of the sprites to create animations and perspective to an object.
 - Where void pointers and pointers to functions should be used.
-- Möller–Trumbore ray-triangle intersection algorithm
+- Correct memory handling. The differences in windows memory caching VS Linux
 - Game design.
 - Level design.
 
 ## Project duration and work distribution
-- Most of the game engine, collision logic, raycasting, raytracing, light, texturemapping, textures and parts of the level editor was written by me.
+- Original Build based engine was coded by me, kafkalainen and HandsomeTom. I was responsible for recording/producing/editing music and audio, also building the base for the level editor and designing its function structure. Most of the Windows compatibility testing and bugfixing was also done by me.
 - Riku Zukale focused on PNG parser and porting, writing level data, writing out music and audio data and level editor. [rzukale](https://github.com/rzukale)
 - Tomi Määrelä [HandsomeTom](https://github.com/handsomeTom/) wrote parts of the original engine, utility functions, drew the hud and did level testing.
-- Elias Parviainen [(Pan1cs)](https://github.com/pan1cs) produced and recorded audio and music for the game, and did parts of the level editor.
+- Joonas Nivala [kafkalainen](https://github.com/kafkalainen) Did the conversion from original build inspired engine to polygon based, collision logic, raycasting, raytracing, light, texturemapping, textures and parts of the level editor.
+
+
 
 ## Editor features
 ![Creation of sectors](assets/create_sectors.gif)
@@ -146,4 +140,4 @@ After all this is calculated, and all other necessary stuff has been allocated i
 
 ## Credits
 - Crewmember sprite credits go to [NMN](https://opengameart.org/users/nmn)
-- Music and most of the audio was produced and recorded by Elias Parviainen [(Pan1cs)](https://github.com/pan1cs)
+- Credits to [kafkalainen](https://github.com/kafkalainen) for writing this project description.
