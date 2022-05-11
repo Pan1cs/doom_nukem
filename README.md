@@ -63,7 +63,7 @@ We decided to pursue a track of creating Duke Nukem-like engine, and to expand t
 ## Project duration and work distribution
 - Original Build based engine was coded by me, kafkalainen and HandsomeTom. I was responsible for recording/producing/editing music and audio, also building the base for the level editor and designing its function structure. Most of the Windows compatibility testing and bugfixing was done by me.
 - Riku Zukale focused on PNG parser and porting, writing level data, writing out music and audio data and level editor. [rzukale](https://github.com/rzukale)
-- Tomi Maarelä [HandsomeTom](https://github.com/handsomeTom/) wrote parts of the original engine, utility functions, drew the hud and did level testing.
+- Tomi Maarela [HandsomeTom](https://github.com/handsomeTom/) wrote parts of the original engine, utility functions, drew the hud and did level testing.
 - Joonas Nivala [kafkalainen](https://github.com/kafkalainen) Did the conversion from original build inspired engine to polygon based, collision logic, raycasting, raytracing, light, texturemapping, textures and parts of the level editor.
 
 
