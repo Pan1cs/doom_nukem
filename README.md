@@ -121,10 +121,10 @@ Game engine is split to parts, parsing, porting and game loop. Most of the data 
 Row | Explanation
 ----|------------
 #doom_nukem_sectors#3#2#0|idx to find level data, followed by number of sectors in the file, sector where level ends and boolean whether map is linked to another map to form a campaign, followed by a mapname.
-#-3#3#0|x and z coordinates of the player, followed by the starting sector.
+#-3#3#0|x and y coordinates of the player, followed by the starting sector.
 #sector0#4#-12#-12#0#2|sector, idx of the sector, number of walls, texture idx of ground and ceiling, is sector part of a lift and level of gravity.
-#-5#2#-2#0#3|x, z, idx of the texture/link to another sector, height of the floor and height of the ceiling.
-#-1#-1#0#0#0|x, z of the light, intensity of the light, control of the light and state of light.
+#-5#2#-2#0#3|x, y, idx of the texture/link to another sector, height of the floor and height of the ceiling.
+#-1#-1#0#0#0|x, y of the light, intensity of the light, control of the light and state of light.
 
 Sector data is parsed together to create a set of triangles, where a wall is just two triangles, top half and bottom half. `calc_map_properties` triangulates the level data to create floors, and ceilings based on the 2d polygon of the sector, taking account height of the ceiling and height of the floor at each point. At this point extra walls are calculated to fill out gaps between sectors. If another sector's floor is higher than another, then the empty room is filled with a wall.
 Also doors are created to the sectors that have a index ranging from 3000 - 18000. Lift doors are created after this. Each lift has two doors, one for each floor. For simplicity's sake, other one remains locked, while other is used. After this all planes are calculated (`calc_unit_normals`), and button locations are calculated from their integer values from the map data. `calc_entity_locations` is made to ensure entities are not outside their given sectors. `calc_plr_position` calculates current position of the player based on x and z values, and finally placed on the right height `player_place_feet_to_ground`. `assign_entity_properties` calculates normals based on the orientation of the entity, whether it is on the wall, whether it is moving, what textures it has and so forth. Same is done with projectile pool.
